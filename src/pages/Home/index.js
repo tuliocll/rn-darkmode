@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList } from "react-native";
+import { FlatList, Switch } from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
 
 import {
@@ -72,6 +72,12 @@ export default function Home({ darkModeValue, onDarkModeChange }) {
 
   return (
     <Container>
+      <Switch
+        value={darkModeValue}
+        onValueChange={onDarkModeChange}
+        thumbColor="#424242"
+        trackColor="#292929"
+      />
       <ProfileContainer>
         <ProfileImage
           source={{

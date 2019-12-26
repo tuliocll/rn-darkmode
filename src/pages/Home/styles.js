@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
   flex: 1;
-  background: #fff;
+  background: ${props => props.theme.background};
 `;
 
 export const ProfileContainer = styled.View`
@@ -48,18 +48,18 @@ export const PostImage = styled.Image`
 export const ProfileName = styled.Text`
   font-size: 30px;
   font-weight: bold;
-  color: #313030;
+  color: ${props => props.theme.titleColor};
 `;
 
 export const ProfileNick = styled.Text`
   font-size: 16px;
   font-weight: bold;
   margin-left: 10px;
-  color: #b0b0b0;
+  color: ${props => props.theme.secondaryText};
 `;
 
 export const FollowButton = styled.TouchableOpacity`
-  background: #ff7142;
+  background: ${props => props.theme.activyColor};
   border-radius: 10px;
   padding: 0px 20px;
   justify-content: center;
@@ -69,17 +69,17 @@ export const FollowButtonText = styled.Text`
   text-align: center;
   font-size: 13px;
   font-weight: bold;
-  color: #fff;
+  color: ${props => props.theme.primaryText};
 `;
 
 export const CountText = styled.Text`
   font-size: 20px;
   font-weight: bold;
-  color: #313030;
+  color: ${props => props.theme.h1Text};
 `;
 
 export const Label = styled.Text`
   font-size: 14px;
   font-weight: bold;
-  color: #b0b0b0;
+  color: ${props => props.theme.label};
 `;
