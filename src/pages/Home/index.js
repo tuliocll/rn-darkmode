@@ -19,6 +19,8 @@ import {
   PostImage
 } from "./styles";
 
+import GestureContainer from "../../components/GestureContainer";
+
 const images = [
   {
     key: "1",
@@ -117,16 +119,17 @@ export default function Home({ darkModeValue, onDarkModeChange }) {
           <Label>Following</Label>
         </CountContainer>
       </CountsContainer>
-
-      <FlatList
-        data={images}
-        renderItem={renderItem}
-        style={{ flex: 1, marginTop: 10 }}
-        contentContainerStyle={{
-          alignItems: "center"
-        }}
-        numColumns={3}
-      />
+      <GestureContainer title="Postagens">
+        <FlatList
+          data={images}
+          renderItem={renderItem}
+          style={{ flex: 1, marginTop: 10 }}
+          contentContainerStyle={{
+            alignItems: "center"
+          }}
+          numColumns={3}
+        />
+      </GestureContainer>
     </Container>
   );
 }

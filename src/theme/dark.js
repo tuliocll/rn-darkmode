@@ -5,5 +5,6 @@ export default {
   secondaryText: "#b0b0b0",
   activyColor: "#ff7142",
   h1Text: "#ff7142",
-  label: "#b0b0b0"
+  label: "#b0b0b0",
+  postsContainerBackground: "#fff"
 };
