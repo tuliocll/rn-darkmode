@@ -6,25 +6,41 @@
  * @flow
  */
 
-import React, { useState } from "react";
-import { StatusBar } from "react-native";
+import React, { useEffect } from "react";
+import { StatusBar, AsyncStorage } from "react-native";
 import { ThemeProvider } from "styled-components";
+import "react-native-gesture-handler";
 
-import lightTheme from "./theme/light";
-import darkTheme from "./theme/dark";
-
-import Home from "./pages/Home";
+import { useStateValue } from "./states/ThemeState";
+import Routes from "./routes";
 
 const App = () => {
-  const [dark, setDark] = useState(false);
+  const [state, dispach] = useStateValue();
+
+  useEffect(() => {
+    async function getStoregeDarkMode() {
+      const darkModeKey = await AsyncStorage.getItem("DarkModeKey");
+      if (darkModeKey === "true") {
+        dispach({
+          type: "enableDarkMode"
+        });
+        return;
+      }
+      dispach({
+        type: "disableDarkMode"
+      });
+    }
+
+    getStoregeDarkMode();
+  }, []);
 
   return (
-    <ThemeProvider theme={dark ? darkTheme : lightTheme}>
+    <ThemeProvider theme={state.theme}>
       <StatusBar
-        barStyle={dark ? "light-content" : "dark-content"}
-        backgroundColor={dark ? darkTheme.background : lightTheme.background}
+        barStyle={state.theme.statusBarStyle}
+        backgroundColor={state.theme.background}
       />
-      <Home onDarkModeChange={() => setDark(!dark)} darkModeValue={dark} />
+      <Routes />
     </ThemeProvider>
   );
 };

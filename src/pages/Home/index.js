@@ -1,5 +1,5 @@
-import React from "react";
-import { FlatList, Switch } from "react-native";
+import React, { useState, useEffect } from "react";
+import { FlatList, Switch, AsyncStorage } from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
 
 import {
@@ -18,6 +18,8 @@ import {
   CountContainer,
   PostImage
 } from "./styles";
+
+import { useStateValue } from "../../states/ThemeState";
 
 const images = [
   {
@@ -65,16 +67,40 @@ const images = [
   }
 ];
 
-export default function Home({ darkModeValue, onDarkModeChange }) {
+export default function Home() {
+  const [darkmode, setDarkmode] = useState(false);
+  const [, dispach] = useStateValue();
+
+  useEffect(() => {
+    async function getInitialState() {
+      const state = await AsyncStorage.getItem("DarkModeKey");
+      if (state === "true") {
+        setDarkmode(true);
+        return;
+      }
+
+      setDarkmode(false);
+    }
+
+    getInitialState();
+  }, []);
+
   function renderItem({ item }) {
     return <PostImage source={{ uri: item.url }} />;
+  }
+
+  function handleChange() {
+    dispach({
+      type: !darkmode ? "enableDarkMode" : "disableDarkMode"
+    });
+    setDarkmode(!darkmode);
   }
 
   return (
     <Container>
       <Switch
-        value={darkModeValue}
-        onValueChange={onDarkModeChange}
+        value={darkmode}
+        onValueChange={handleChange}
         thumbColor="#424242"
         trackColor="#292929"
       />

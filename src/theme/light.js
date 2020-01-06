@@ -5,5 +5,7 @@ export default {
   secondaryText: "#b0b0b0",
   activyColor: "#ff7142",
   h1Text: "#313030",
-  label: "#b0b0b0"
+  label: "#b0b0b0",
+  feedPostTextColor: "#000",
+  statusBarStyle: "dark-content"
 };
