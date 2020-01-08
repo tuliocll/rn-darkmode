@@ -82,6 +82,8 @@ export default function Home() {
       setDarkmode(false);
     }
 
+    console.log("asdasdadqweqw");
+
     getInitialState();
   }, []);
 
