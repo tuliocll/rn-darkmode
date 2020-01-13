@@ -11,8 +11,14 @@ import FeedPage from "./pages/Feed";
 const Feed = createStackNavigator({
   index: {
     screen: FeedPage,
-    navigationOptions: {
-      title: "Feed"
+    navigationOptions: ({ navigation }) => {
+      return {
+        title: "Feed",
+        headerTintColor: navigation.getParam("titleColor", "#000"),
+        headerStyle: {
+          backgroundColor: navigation.getParam("backgroundColor", "#fff")
+        }
+      };
     }
   }
 });

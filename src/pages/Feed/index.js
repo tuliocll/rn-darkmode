@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FlatList } from "react-native";
 
 import { Container } from "./styles";
 import Post from "./components/Post";
+
+import { useStateValue } from "../../states/ThemeState";
 
 const data = [
   {
@@ -47,7 +49,16 @@ const data = [
   }
 ];
 
-export default function Feed() {
+export default function Feed({ navigation }) {
+  const [state] = useStateValue();
+
+  useEffect(() => {
+    navigation.setParams({
+      backgroundColor: state.theme.background,
+      titleColor: state.theme.titleColor
+    });
+  }, [state.theme]);
+
   function renderItem({ item }) {
     return <Post item={item} />;
   }
