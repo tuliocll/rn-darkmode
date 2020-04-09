@@ -32,7 +32,7 @@ darkModePersist  | Contéudo final do tutorial de persistência de dados e estad
 Clonar o repositorio:
 
 ```
-git clone https://github.com/tuliocll/sagres-bot.git
+git clone https://github.com/tuliocll/rn-darkmode.git
 ```
 
 Instale as dependencias:
@@ -48,6 +48,12 @@ npm install
 Tutorial  | Link
 ------------- | -------------
 DarkMode StyledComponents  | https://youtu.be/nJN7UNZetlg
+Animação Tutorial Pt.1  | https://youtu.be/AAYd5Vob0jY
+Animação Tutorial Pt.2  | https://youtu.be/Qc3j55C_1U8
+Context API e React Navigation  | https://youtu.be/cLkX5MtZjEo
+Context API e Async Storage  | https://youtu.be/gPpH-mTEwbM
+React Navigation: Alterando Rotas e Parâmetros  | https://youtu.be/C2k6kwSi9FY
+
 
 
 ### End
