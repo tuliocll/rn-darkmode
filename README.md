@@ -1,4 +1,4 @@
-# Tutorial Darkmode com React Native e Styled components!
+# Tutorial Darkmode com React Native⚛️ e Styled components!
 
 <div align="center">
 
@@ -12,11 +12,11 @@
 
 </div>
 
-## Sobre
+## 📖Sobre
 
 Este repositorio contem o projeto final e o projeto base para o tutorial do darkmode com styled components, Animação com React Native, Contexto e estado global com React Native e afins, confira na tabela mais abaixo.
 
-### Branchs:
+### 🔀Branchs:
 
 Nome da Branch  | Descrição
 ------------- | -------------
@@ -27,7 +27,7 @@ darkModePersist  | Contéudo final do tutorial de persistência de dados e estad
 
 
 
-## Iniciando
+## 👨🏿‍💻Iniciando
 
 Clonar o repositorio:
 
@@ -43,7 +43,7 @@ ou
 npm install
 ```
 
-## Siga o(s) vídeo(s);
+## 🎦Siga o(s) vídeo(s);
 
 Tutorial  | Link
 ------------- | -------------
@@ -56,4 +56,4 @@ React Navigation: Alterando Rotas e Parâmetros  | https://youtu.be/C2k6kwSi9FY
 
 
 
-### End
+### 🙅🏿‍♂️End
