@@ -1,4 +1,4 @@
-# Tutorial Darkmode com React Native⚛️ e Styled components!
+# Tutorial Darkmode com React Native⚛️ e Styled components💅🏾!
 
 <div align="center">
 
