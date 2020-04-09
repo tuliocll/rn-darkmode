@@ -14,7 +14,7 @@
 
 ## Sobre
 
-Este repositorio contem o projeto final e o projeto base para o tutorial do darkmode com styled components.
+Este repositorio contem o projeto final e o projeto base para o tutorial do darkmode com styled components, Animação com React Native, Contexto e estado global com React Native e afins, confira na tabela mais abaixo.
 
 ### Branchs:
 
